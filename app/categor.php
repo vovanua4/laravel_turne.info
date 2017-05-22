@@ -12,7 +12,7 @@ class categor extends Model
 
 
 public function article(){
-    return $this->belongsToMany('App\article', );
+    return $this->belongsToMany('App\article');
 }
 
 }

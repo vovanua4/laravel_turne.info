@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\sity;
 use DB;
 use App\categor;
-use App\article
+use App\article;
 
 class MainContr extends Controller
 {

@@ -16,3 +16,10 @@ Route::get('/article/{id}', ['uses'=>'MainContr@article','as'=>'article'] );
 Route::get('/article', ['uses'=>'MainContr@articleAll','as'=>'articleAll'] );
 
 
+
+Route::group(['prefix'=>'adminka'] , function(){
+    Route::get('/',['uses'=>'Admin\AdminMainContr@main' , 'as'=>'mainHome']);
+    Route::get('article', ['uses'=>'Admin\AdminMainContr@articleList' , 'as'=>'articleList']);
+
+
+});
