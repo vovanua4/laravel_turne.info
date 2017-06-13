@@ -13,17 +13,9 @@ class MainContr extends Controller
     //
     
     public function index(){
-//        $categor = new categor();
-//        $categor->name = 'Море' ;
-//        $categor->active = TRUE;
-//        $categor->info = 'вода, солнышко, рыба , и т д';
-//        $categor->save();
-//        $this->xlam();
         $artical = article::where('popular' , true);
-//        dd($artical);
         $this->assign('artical' , $artical);
         $this->template = 'index';
-
         return $this->render();
     }
     

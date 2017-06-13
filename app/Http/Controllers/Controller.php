@@ -14,7 +14,10 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     public $template = false;
     public $value = [];
-
+    /*
+     * @autor vovan
+     * собирает все что надо !!!
+     */
     public function render(){
 
         $this->assign('categors' , categor::all());
