@@ -4,6 +4,16 @@
 
 
 @section('main')
+<ul>
+{{--    {{dd($artical)}}--}}
+ @foreach($artical as $one):
+<li>
 
-<h1>Hello111</h1>
+
+</li>
+
+@endforeach
+</ul>
+
+<h1></h1>
 @endsection

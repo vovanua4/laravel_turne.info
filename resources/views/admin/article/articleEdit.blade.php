@@ -18,14 +18,15 @@
         @show
 
 <h1>New Artical</h1>
+
             <form action="{{route('articalNew')}}" method="post" >
-                <p><span>active</span><input type="checkbox" value="true" name="active"></p>
-                <p><span>title_ru:</span><input type="text" value="" name="title_ru"></p>
-                <p><span>title_en:</span><input type="text" value="" name="title_en"></p>
-                <p><span>html_ru:</span><input type="text" value="" name="html_ru"></p>
-                <p><span>html_en:</span><input type="text" value=""name="html_en"></p>
-                <p><span>like:</span><input type="text" value="" name="like" disabled></p>
-                <p><span>coutViews:</span><input type="text" value="" name="coutViews" disabled></p>
+                <p><span>active</span><input type="checkbox" @if ($oneArtical->active){{'checked'}}  @endif value="1" name="active"></p>
+                <p><span>title_ru:</span><input type="text" value="{{$oneArtical->title_ru}}" name="title_ru"></p>
+                <p><span>title_en:</span><input type="text" value="{{$oneArtical->title_en}}" name="title_en"></p>
+                <p><span>html_ru:</span><input type="text" value="{{$oneArtical->html_ru}}" name="html_ru"></p>
+                <p><span>html_en:</span><input type="text" value="{{$oneArtical->html_en}}" name="html_en"></p>
+                <p><span>like:</span><input type="text" value="{{$oneArtical->like}}" name="like" disabled></p>
+                <p><span>coutViews:</span><input type="text" value="{{$oneArtical->coutViews}}" name="coutViews" disabled></p>
                 {{ csrf_field() }}
                 <input class="btn" type="submit" value="Save">
 

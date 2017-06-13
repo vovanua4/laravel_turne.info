@@ -18,8 +18,13 @@ class MainContr extends Controller
 //        $categor->active = TRUE;
 //        $categor->info = 'вода, солнышко, рыба , и т д';
 //        $categor->save();
-        $this->xlam();
-        return view('index', $this->respons);
+//        $this->xlam();
+        $artical = article::where('popular' , true);
+//        dd($artical);
+        $this->assign('artical' , $artical);
+        $this->template = 'index';
+
+        return $this->render();
     }
     
     
